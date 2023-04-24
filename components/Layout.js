@@ -8,16 +8,16 @@ const Layout = () =>{
             <nav>
                 <ul>
                     <li>
-                        <Link href="/">home</Link>
+                        <Link href="/">Home</Link>
                     </li>
                     <li>
-                        <Link href="/orders">orders</Link>
+                        <Link href="/orders/allorders">View Orders</Link>
                     </li>
                     <li>
-                        <Link href="/addorders">addorders</Link>
+                        <Link href="orders/addorders">Add/Create Order</Link>
                     </li>
                     <li>
-                        <Link href="/about">about</Link>
+                        <Link href="/about">About</Link>
                     </li>
 
                 </ul>

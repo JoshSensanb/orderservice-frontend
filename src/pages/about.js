@@ -5,7 +5,10 @@ const About = () =>{
 
     return (
         <>
-            displaying customers ...
+            This project was done by Josh Sensanbaugher
+            This is a demo to connect a front and back end for
+            C322 at Indiana University.
+
         </>
     )
 }
