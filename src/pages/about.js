@@ -1,5 +1,5 @@
 import styles from "../styles/NavBar.module.css";
-import Navbar from "../../components/Navbar";
+import NavBar from "../../components/NavBar";
 import Layout from "../../components/Layout";
 
 const About = () =>{

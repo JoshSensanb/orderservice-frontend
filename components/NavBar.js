@@ -1,9 +1,8 @@
-import { useState } from "react";
 import styles from "/src/styles/NavBar.module.css"
 import Link from "next/link";
 
 
-const Navbar = () => {
+const NavBar = () => {
     return (
         <>
             <header>
@@ -37,4 +36,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavBar;
