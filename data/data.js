@@ -5,13 +5,35 @@ let findallorders = () =>{
         .then(response=>response.json());
 }
 let saveOrder = (order) => {
-    return fetch(host + "/orders", {
+    return fetch(host + "", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            customerId:order.id
+            customerId:order.customerId,
+            totalPrice:order.totalPrice,
+
+            shippingAddress:{
+                state:order.state,
+                city:order.city,
+                postalCode:order.postalCode
+            },
+            item:{
+                name:order.item.name,
+                quantity:order.item.quantity,
+                price:order.item.price
+            },
+            payment: {
+                method: order.payment.method,
+                number: order.payment.number,
+                billingAddress: {
+                    state: order.payment.billingAddress.state,
+                    city: order.payment.billingAddress.city,
+                    postalCode: order.payment.billingAddress.postalCode
+                }
+            }
+
 
 
 
@@ -32,3 +54,4 @@ let data = {
     orders:findallorders,
     saveOrder: saveOrder
 }
+export default data;

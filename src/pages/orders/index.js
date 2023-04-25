@@ -29,14 +29,25 @@ const Orders = () => {
               <tr>
                 <th>ID</th>
                 <th>Total</th>
+                <th>Shipping State</th>
               </tr>
             </thead>
             <tbody>
               {orders.map((o, i) => (
                 <tr key={i}>
-                  <td data-label="customerId">{o.id}</td>
+                  <td data-label="customerId">{o.customerId}</td>
                   <td data-label="total">{o.total}</td>
-
+                  <td data-label="shippingAddress.state">{o.shippingAddress.state}</td>
+                  <td data-label="shippingAddress.city">{o.shippingAddress.city}</td>
+                  <td data-label="shippingAddress.postalCode">{o.shippingAddress.postalCode}</td>
+                  <td data-label="item.name">{o.item.name}</td>
+                  <td data-label="item.quantity">{o.item.quantity}</td>
+                  <td data-label="item.price">{o.item.price}</td>
+                  <td data-label="payment.method">{o.payment.method}</td>
+                  <td data-label="payment.number">{o.payment.number}</td>
+                  <td data-label="payment.billingAddress.state">{o.payment.billingAddress.state}</td>
+                  <td data-label="payment.billingAddress.city">{o.payment.billingAddress.city}</td>
+                  <td data-label="payment.billingAddress.postalCode">{o.payment.billingAddress.postalCode}</td>
                 </tr>
               ))}
             </tbody>

@@ -1,4 +1,4 @@
-import styles from "../../styles/order.add.module.css";
+import styles from "src/styles/order.add.module.css";
 import { useForm } from 'react-hook-form';
 import data from '../../../data/data'
 
@@ -46,11 +46,11 @@ const Order = () => {
                                    placeholder="Total Price"/>
                         </div>
                         <div className={styles.user_input_box}>
-                            <label htmlFor="shippingstate">Shipping State</label>
+                            <label htmlFor="shippingAddress.state">Shipping State</label>
                             <input type="text"
-                                   id="shippingstate"
-                                   name="shippingstate"
-                                   {...register('shippingstate',
+                                   id="shippingAddress.state"
+                                   name="shippingAddress.state"
+                                   {...register('shippingAddress.state',
                                        {required: true,
                                            message: 'Please enter your shipping state' })}
                                    placeholder="Enter shipping state"/>
@@ -58,11 +58,11 @@ const Order = () => {
 
                         </div>
                         <div className={styles.user_input_box}>
-                            <label htmlFor="city">Shipping City</label>
+                            <label htmlFor="shippingAddress.city">Shipping City</label>
                             <input type="text"
-                                   id="shippingcity"
-                                   name="shippingcity"
-                                   {...register('shippingcity',
+                                   id="shippingAddress.city"
+                                   name="shippingAddress.city"
+                                   {...register('shippingAddress.city',
                                        {required: true,
                                            message: 'please enter the shipping city' })}
                                    placeholder="Enter Shipping City"/>
@@ -71,45 +71,106 @@ const Order = () => {
 
 
                         <div className={styles.user_input_box}>
-                            <label htmlFor="shipcode">Shipping Zip Code</label>
+                            <label htmlFor="shippingAddress.postalcode">Shipping Zip Code</label>
                             <input type="text"
-                                   id="shippingzip"
-                                   name="shippingzip"
-                                   {...register('shippingzip',
+                                   id="shippingAddress.postalcode"
+                                   name="shippingAddress.postalcode"
+                                   {...register('shippingAddress.postalcode',
                                        {required: true,
                                            message: 'please enter shipping zipcode' })}
                                    placeholder="Shipping Zip Code"/>
                         </div>
                         <div className={styles.user_input_box}>
-                            <label htmlFor="itemname">Item Name</label>
+                            <label htmlFor="item.name">Item Name</label>
                             <input type="text"
-                                   id="itemname"
-                                   name="itemname"
-                                   {...register('itemname',
+                                   id="item.name"
+                                   name="item.name"
+                                   {...register('item.name',
                                        {required: true,
                                            message: 'please enter the item name' })}
                                    placeholder="Item Name"/>
                         </div>
                         <div className={styles.user_input_box}>
-                            <label htmlFor="itemquantity">Item Quantity</label>
+                            <label htmlFor="item.quantity">Item Quantity</label>
                             <input type="text"
-                                   id="itemquanity"
-                                   name="itemquanity"
-                                   {...register('itemquanity',
+                                   id="item.quantity"
+                                   name="item.quantity"
+                                   {...register('item.quantity',
                                        {required: true,
                                            message: 'please enter item quanity' })}
                                    placeholder="Item Quantity"/>
                         </div>
                         <div className={styles.user_input_box}>
-                            <label htmlFor="itemprice">Item Price</label>
+                            <label htmlFor="item.price">Item Price</label>
                             <input type="text"
-                                   id="itemprice"
-                                   name="itemprice"
-                                   {...register('itemprice',
+                                   id="item.price"
+                                   name="item.price"
+                                   {...register('item.price',
                                        {required: true,
                                            message: 'please enter item price' })}
                                    placeholder="Item Price"/>
                         </div>
+
+                        <div className={styles.user_input_box}>
+                            <label htmlFor="payment.method">Payment Method</label>
+                            <input type="text"
+                                   id="payment.method"
+                                   name="payment.method"
+                                   {...register('paymethod',
+                                       {required: true,
+                                           message: 'please enter Payment Method' })}
+                                   placeholder="Payment Method"/>
+                        </div>
+
+                        <div className={styles.user_input_box}>
+                            <label htmlFor="payment.number">Payment Number</label>
+                            <input type="text"
+                                   id="payment.number"
+                                   name="payment.number"
+                                   {...register('payment.number',
+                                       {required: true,
+                                           message: 'please enter Payment Number' })}
+                                   placeholder="Payment Number"/>
+                        </div>
+
+
+
+                    </div>
+                    <div className={styles.user_input_box}>
+                        <label htmlFor="payment.billingAddress.state">Billing State</label>
+                        <input type="text"
+                               id="payment.billingAddress.state"
+                               name="payment.billingAddress.state"
+                               {...register('payment.billingAddress.state',
+                                   {required: true,
+                                       message: 'Please enter your billing state' })}
+                               placeholder="Enter billing state"/>
+
+
+                    </div>
+                    <div className={styles.user_input_box}>
+                        <label htmlFor="payment.billingAddress.city">Billing City</label>
+                        <input type="text"
+                               id="payment.billingAddress.city"
+                               name="payment.billingAddress.city"
+                               {...register('payment.billingAddress.city',
+                                   {required: true,
+                                       message: 'please enter the billing city' })}
+                               placeholder="Enter billing City"/>
+                    </div>
+
+
+
+                    <div className={styles.user_input_box}>
+                        <label htmlFor="payment.billingAddress.postalCode">Billing Zip Code</label>
+                        <input type="text"
+                               id="payment.billingAddress.postalCode"
+                               name="payment.billingAddress.postalCode"
+                               {...register('payment.billingAddress.postalCode',
+                                   {required: true,
+                                       message: 'please enter billing zipcode' })}
+                               placeholder="Billing Zip Code"/>
+
 
                     </div>
 

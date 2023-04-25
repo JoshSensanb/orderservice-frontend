@@ -1,29 +1,16 @@
-import Navbar from "./Navbar";
-import Link from "next/link";
-const Layout = () =>{
-    return(
+import Footer from "./Footer";
+import NavBar from "./NavBar";
 
+
+const Layout = ({children}) => {
+
+    return (
         <>
-            <Navbar/>
-            <nav>
-                <ul>
-                    <li>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/orders/allorders">View Orders</Link>
-                    </li>
-                    <li>
-                        <Link href="orders/addorders">Add/Create Order</Link>
-                    </li>
-                    <li>
-                        <Link href="/about">About</Link>
-                    </li>
-
-                </ul>
-            </nav>
-
+            <NavBar />
+            {children}
+            <Footer />
         </>
     )
 }
+
 export default Layout;
